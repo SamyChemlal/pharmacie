@@ -1,0 +1,40 @@
+
+.menu {
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .menu-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s;
+  }
+  
+  .menu-links a:hover {
+    color: #f8f9fa;
+  }
+  
+  .menu-links a.active {
+    font-weight: bold;
+  }
+  
+  .menu-links a:last-child {
+    margin-right: 0;
+  }
+  

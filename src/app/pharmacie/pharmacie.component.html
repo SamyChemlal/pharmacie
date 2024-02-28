@@ -1,0 +1,19 @@
+<div class="container">
+
+<app-menu></app-menu>
+<main>
+    <div class="sidebar" *ngIf="isAdmin">
+      <h3>Actions administratives</h3>
+      <button (click)="redirigerVersAjoutProduit()">Ajouter un Produit</button>
+      <button (click)="deleteProduct()">Supprimer un Produit</button>
+      <div class="message" *ngIf="successMessage">{{ successMessage }}</div>
+    </div>
+
+    <div class="product-list">
+      <h2>Nos Produits Pharmaceutiques</h2>
+      <img src="assets/Pharmacie.jpg" alt="logo" class="product-image">
+
+        <app-produit-pharmaceutique></app-produit-pharmaceutique>
+    </div>
+  </main>
+ 

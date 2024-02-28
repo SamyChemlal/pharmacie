@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>Inscription</h2>
+  <form>
+    <div *ngIf="messageErreur" class="alert alert-danger">
+      {{ messageErreur }}
+    </div>
+
+    <div class="form-group">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" [(ngModel)]="utilisateur.nom" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email :</label>
+      <input type="text" id="email" name="email" [(ngModel)]="utilisateur.email" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" name="prenom" [(ngModel)]="utilisateur.prenom" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label>Mot de passe :</label>
+      <input type="password" name="psw" [(ngModel)]="utilisateur.psw" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label>Rôle :</label>
+      <div>
+        <label>
+          <input type="radio" name="role" [(ngModel)]="utilisateur.role" value="User"> User
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="radio" name="role" [(ngModel)]="utilisateur.role" value="Admin"> Admin
+        </label>
+      </div>
+    </div>
+    <button type="button" (click)="inscriptionS()" class="btn btn-primary">S'inscrire</button>
+  </form>
+</div>

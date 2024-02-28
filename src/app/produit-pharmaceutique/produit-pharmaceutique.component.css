@@ -1,0 +1,65 @@
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  .product-details {
+    margin-bottom: 10px;
+  }
+  
+  .product-details h3 {
+    margin: 0;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .btn-ajouter-panier {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .quantity-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-input label {
+    margin-right: 10px;
+  }
+  
+  .quantity-input input {
+    width: 60px;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .quantity-input button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+  

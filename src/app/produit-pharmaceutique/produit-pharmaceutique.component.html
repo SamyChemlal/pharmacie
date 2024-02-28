@@ -1,0 +1,24 @@
+<!-- produit-pharmaceutique.component.html -->
+
+<div class="product-list">
+    <div *ngIf="produits">
+      <div *ngFor="let produit of produits" class="product-card">
+        <div class="product-details">
+          <h3>{{ produit.nom }}</h3>
+          <p>Prix: {{ produit.prix }}</p>
+          <p>Quantité disponible: {{ produit.quantite }}</p>
+        </div>
+        <div class="action-buttons">
+          <button type="button" (click)="ajouterAuPanier(produit)" class="btn-ajouter-panier">Ajouter au panier</button>
+          <div *ngIf="selectedProduit === produit" class="quantity-input">
+            <label for="quantite">Quantité à ajouter:</label>
+            <input type="number" [(ngModel)]="quantiteSelectionnee" name="quantiteSelectionnee" min="1">
+            <button type="button" (click)="validerC()">Valider</button>
+            <div *ngIf="messageQuantite" class="error-message">{{ messageQuantite }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
